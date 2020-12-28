@@ -1,0 +1,6 @@
+---
+# Import playbooks that you want to deploy in one go.
+# PS: the order of the playbooks being executed matters.
+- import_playbook: debian_lynis.yaml
+- import_playbook: centos_lynis.yaml
+
