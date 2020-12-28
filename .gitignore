@@ -1,0 +1,10 @@
+# ignoring secrets for now
+become-secret
+
+# ignoring ansible.cfg in the repository for now
+ansible.cfg
+
+# ignoring inventory file (hosts) for now
+hosts
+
+
