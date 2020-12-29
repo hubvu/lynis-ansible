@@ -1,2 +1,9 @@
 ---
 # tasks file for centos_lynis
+
+# ===
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
+# ===
+
