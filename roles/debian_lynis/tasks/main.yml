@@ -1,2 +1,8 @@
 ---
 # tasks file for debian_lynis
+
+# ===
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
+# ===
