@@ -7,3 +7,30 @@
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
 # ===
 
+- name: ensure that the required dependency packages are installed on from the centos host
+  dnf:
+    name:
+      - ca-certificates
+      - curl
+      - nss
+      - openssl
+    state: present
+
+- name: add the lynis repository to the centos host
+  yum_repository:
+    name: lynis
+    description: CISOfy Software - Lynis package
+    baseurl: https://packages.cisofy.com/community/lynis/rpm/
+    enabled: yes
+    gpgkey: https://packages.cisofy.com/keys/cisofy-software-rpms-public.key
+    gpgcheck: yes
+    priority: '2'
+
+- name: force dnf to check if cache is out of date and redownload if needed
+  dnf:
+    update_cache: yes
+
+- name: ensure that lynis is installed on the centos host
+  dnf:
+    name:
+      - lynis
