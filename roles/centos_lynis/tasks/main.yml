@@ -34,3 +34,4 @@
   dnf:
     name:
       - lynis
+    state: present
