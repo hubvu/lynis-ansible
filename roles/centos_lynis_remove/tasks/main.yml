@@ -18,3 +18,16 @@
     file: lynis
     state: absent
   notify: yum-clean-metadata
+
+- name: ensure that the required dependency packages are removed from the centos host
+  dnf:
+    name:
+      - ca-certificates
+      - curl
+      - nss
+      - openssl
+    state: absent
+
+- name: force dnf to check if cache is out of date and redownload if needed
+  dnf:
+    update_cache: yes
