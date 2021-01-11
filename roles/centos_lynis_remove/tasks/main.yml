@@ -4,11 +4,17 @@
 # ===
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html
-# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
 # ===
 
-- name: ensure that lynis is installed on the centos host
+- name: ensure that lynis is removed from the centos host
   dnf:
     name:
       - lynis
     state: absent
+
+- name: remove the lynis repository from the centos host and clean up left-over metadata
+  yum_repository:
+    name: lynis
+    file: lynis
+    state: absent
+  notify: yum-clean-metadata
