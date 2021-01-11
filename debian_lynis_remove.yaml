@@ -1,0 +1,8 @@
+---
+# playbook for the debian_lynis_remove role.
+- hosts: debian_hosts
+  vars_files:
+    - become-secret
+  become: true
+  roles:
+    - debian_lynis_remove
