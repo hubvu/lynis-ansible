@@ -12,22 +12,19 @@
       - lynis
     state: absent
 
-- name: remove the lynis repository from the centos host and clean up left-over metadata
+- name: remove the lynis repository from the centos host
   yum_repository:
     name: lynis
     file: lynis
-    state: absent
-  notify: yum-clean-metadata
-
-- name: ensure that the required dependency packages are removed from the centos host
-  dnf:
-    name:
-      - ca-certificates
-      - curl
-      - nss
-      - openssl
     state: absent
 
 - name: force dnf to check if cache is out of date and redownload if needed
   dnf:
     update_cache: yes
+
+- name: ensure that the required dependency packages are removed from the centos host
+  dnf:
+    name:
+      - openssl
+      - nss
+    state: absent
