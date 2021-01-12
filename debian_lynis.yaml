@@ -1,5 +1,5 @@
 ---
-# playbook for the ssh_ssh role.
+# playbook for the debian_lynis role.
 - hosts: debian_hosts
   vars_files:
     - become-secret
