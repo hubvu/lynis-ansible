@@ -7,7 +7,7 @@
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
 # ===
 
-- name: ensure that the required dependency packages are installed on from the debian host
+- name: ensure that the required dependency packages are installed on the debian host
   apt:
     name:
       - apt-transport-https
