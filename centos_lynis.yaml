@@ -1,5 +1,5 @@
 ---
-# playbook for the centos_ssh role.
+# playbook for the centos_lynis role.
 - hosts: centos_hosts
   vars_files:
     - become-secret
