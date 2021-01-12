@@ -10,8 +10,10 @@
 - name: ensure that the required dependency packages are installed on the debian host
   apt:
     name:
+      - python3-apt
       - apt-transport-https
       - ca-certificates
+      - gpg
     state: present
 
 - name: add the apt signing key for lynis, uses whichever key is at the url
