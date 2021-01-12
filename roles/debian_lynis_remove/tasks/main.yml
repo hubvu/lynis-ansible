@@ -1,2 +1,14 @@
 ---
 # tasks file for debian_lynis_remove
+
+# ===
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
+# ===
+
+- name: ensure that lynis is removed from the centos host
+  apt:
+    name:
+      - lynis
+    state: absent
