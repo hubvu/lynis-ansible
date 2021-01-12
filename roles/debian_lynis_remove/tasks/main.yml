@@ -25,3 +25,7 @@
     url: https://packages.cisofy.com/keys/cisofy-software-public.key
     validate_certs: yes
     state: absent
+
+- name: force apt to check if cache is out of date and redownload if needed
+  apt:
+    update_cache: yes
