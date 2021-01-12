@@ -12,3 +12,9 @@
     name:
       - lynis
     state: absent
+
+- name: remove the lynis repository to the debian host
+  apt_repository:
+    repo: deb https://packages.cisofy.com/community/lynis/deb/ stable main
+    filename: cisofy-lynis
+    state: absent
