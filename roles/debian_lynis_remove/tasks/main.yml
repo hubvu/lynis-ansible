@@ -13,8 +13,15 @@
       - lynis
     state: absent
 
-- name: remove the lynis repository to the debian host
+- name: remove the lynis repository from the debian host
   apt_repository:
     repo: deb https://packages.cisofy.com/community/lynis/deb/ stable main
     filename: cisofy-lynis
+    state: absent
+
+- name: remove the apt signing key for lynis
+  apt_key:
+    id: C80E383C3DE9F082E01391A0366C67DE91CA5D5F
+    url: https://packages.cisofy.com/keys/cisofy-software-public.key
+    validate_certs: yes
     state: absent
