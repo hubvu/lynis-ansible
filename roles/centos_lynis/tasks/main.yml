@@ -4,10 +4,9 @@
 # ===
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_repository_module.html
-# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html
 # ===
 
-- name: ensure that the required dependency packages are installed on from the centos host
+- name: ensure that the required dependency packages are installed on the centos host
   dnf:
     name:
       - ca-certificates
