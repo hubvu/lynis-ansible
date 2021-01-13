@@ -28,9 +28,6 @@ galaxy_info:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
   platforms:
-   - name: CentOS
-     versions:
-     - Stream
    - name: Debian
      versions:
      - 10
