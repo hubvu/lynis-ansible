@@ -31,6 +31,9 @@ galaxy_info:
    - name: CentOS
      versions:
      - Stream
+   - name: Debian
+     versions:
+     - 10
   #   - 25
   # - name: SomePlatform
   #   versions:
