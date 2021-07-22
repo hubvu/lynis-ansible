@@ -1,6 +1,6 @@
 galaxy_info:
   author: hubvu
-  description: Ansible Role that deploys Lynis, which is a free and open source security auditing tool, onto a Debian server installation.
+  description: Ansible Role that deploys Lynis, which is a free and open source security auditing tool, onto a Debian server.
   company: N/A
 
   # If the issue tracker for your role is not on github, uncomment the
