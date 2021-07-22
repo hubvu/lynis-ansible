@@ -21,7 +21,7 @@
 
 - name: remove the apt signing key for lynis
   apt_key:
-    id: C80E383C3DE9F082E01391A0366C67DE91CA5D5F
+    id: 013baa07180c50a7101097ef9de922f1c2fde6c4
     url: https://packages.cisofy.com/keys/cisofy-software-public.key
     validate_certs: yes
     state: absent
