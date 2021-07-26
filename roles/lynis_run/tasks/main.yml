@@ -1,0 +1,20 @@
+---
+# tasks file for lynis_run
+
+# ===
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/fetch_module.html
+# ===
+
+- name: Run an audit on the host(s) and also perform a penetration test scan
+  command: "lynis audit system --pentest"
+  become: yes
+  register: lynis_audit_status
+  changed_when: "'Lynis security scan details' not in lynis_audit_status.stdout"
+
+- name: Fetch "/var/log/lynis.log" and store the results in a "lynis_audit_results" directory under the playbook
+  fetch:
+    src: /var/log/lynis.log
+    dest: lynis_audit_results/{{ inventory_hostname }}/{{ ansible_facts['date_time']['iso8601'] }}-{{ ansible_facts['distribution'] }}-{{ ansible_facts['distribution_version'] }}/
+    flat: yes
+    validate_checksum: yes
