@@ -4,3 +4,5 @@ become-secret
 ansible.cfg
 # ignoring inventory file (hosts)
 hosts
+# ignoring lynis_audit_results directory
+lynis_audit_results
