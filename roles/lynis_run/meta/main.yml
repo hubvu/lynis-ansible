@@ -1,6 +1,6 @@
 galaxy_info:
   author: hubvu
-  description: Ansible Role that removes Lynis, which is a free and open source security auditing tool, from a CentOS server.
+  description: Ansible Role that will run Lynis, audit the hosts, and fetch the results and store them in a "lynis_audit_results" directory for review.
   company: N/A
 
   # If the issue tracker for your role is not on github, uncomment the
@@ -28,6 +28,9 @@ galaxy_info:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
   platforms:
+    - name: Debian
+      versions:
+        - 10
     - name: CentOS
       versions:
         - 8-stream

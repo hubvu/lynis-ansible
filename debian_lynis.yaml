@@ -1,8 +1,8 @@
 ---
 # playbook for the debian_lynis role.
 - hosts: debian_hosts
-  vars_files:
-    - become-secret
+  # vars_files:
+  #   - become-secret
   become: true
   roles:
     - debian_lynis

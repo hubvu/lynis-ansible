@@ -1,10 +1,8 @@
-# ignoring secrets for now
+# ignoring secrets
 become-secret
-
-# ignoring ansible.cfg in the repository for now
+# ignoring ansible.cfg in the repository
 ansible.cfg
-
-# ignoring inventory file (hosts) for now
+# ignoring inventory file (hosts)
 hosts
-
-
+# ignoring lynis_audit_results directory
+lynis_audit_results

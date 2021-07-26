@@ -3,5 +3,6 @@
 # PS: the order of the playbooks being executed matters.
 - import_playbook: debian_lynis.yaml
 - import_playbook: centos_lynis.yaml
-#- import_playbook: debian_lynis_remove.yaml
-#- import_playbook: centos_lynis_remove.yaml
+- import_playbook: lynis_run.yaml
+- import_playbook: debian_lynis_remove.yaml
+- import_playbook: centos_lynis_remove.yaml
